@@ -1,5 +1,5 @@
 import NavbarMenu from "../components/NavBar";
-import { BrowserRouter as Router, Routes, Route,Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from "./Accueil";
 import Cabinet from "./Cabinet";
 import Honoraires from "./honoraires";

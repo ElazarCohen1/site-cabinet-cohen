@@ -5,7 +5,7 @@ export default function Honoraires(){
     const [activeTab, setActiveTab] = useState('principes');
 
     return (
-        <div id="honoraires" className="min-h-screen bg-gray-50 py-12">
+        <div id="honoraires" className="min-h-screen bg-gray-50 p-12 mt-3">
             <div className="container mx-auto px-4">
                 <Title className="text-center mb-16 text-blue-900" text="Nos Honoraires" />
                 

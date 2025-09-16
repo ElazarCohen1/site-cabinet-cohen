@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import logo from "../assets/logo.png";
 
 function NavbarMenu() {
   const [scrolled,setscroll] = useState(false);
@@ -21,11 +22,15 @@ function NavbarMenu() {
   }, []);
   return (
     <Navbar expand="lg" fixed="top" className={`z-10 w-full transition-colors duration-300 ${
-        scrolled ? "bg-white shadow-md" : "bg-transparent"
+        scrolled ? "bg-white shadow-md" : "bg-white/50 backdrop-blur-none"
       }`}>
       <Container>
         <Navbar.Brand as={Link} to="/">
-          Cabinet Cohen
+          <img
+            src={logo}
+            alt="Cabinet Cohen"
+            className="h-12 w-auto d-inline-block align-top"
+          />
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="main-navbar" />

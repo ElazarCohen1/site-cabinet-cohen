@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import img3 from '../assets/5.jpg';
 import Title from '../components/TitleFont';
 import { Link } from 'react-router-dom';
+import cabinet1 from '../assets/cabinet1.jpg';
+import cabinet2 from '../assets/cabinet2.jpg';
+import cabinet3 from '../assets/cabinet3.jpg';
 
 export default function Cabinet() {
     const [imageLoaded, setImageLoaded] = useState(false);
@@ -15,8 +18,8 @@ export default function Cabinet() {
 
     return (
         <div id="cabinet">
-            <div className="relative flex flex-col justify-center items-center min-h-screen pt-16">
-                
+            {/* HERO SECTION */}
+            <div className="relative flex flex-col justify-center items-center min-h-screen pt-16"> 
                 <img
                     src={img3}
                     loading="lazy"
@@ -24,34 +27,65 @@ export default function Cabinet() {
                     className="fixed inset-0 -z-10 bg-cover bg-center"
                     onLoad={() => setImageLoaded(true)}
                 />
-                
                 <div className='h-screen flex justify-center items-center '>
-                    <Title className=" z-10 animate-slide-bottom  text-blue-900" text="Notre Cabinet" />
+                    <Title className="z-10 animate-slide-bottom text-blue-900" text="Notre Cabinet" />
                 </div>
             </div>
 
+            {/* CONTENT */}
             <div className="bg-white py-16 px-6">
-                <div className="max-w-4xl mx-auto">
-                    <h2 className="text-3xl font-bold mb-6 text-blue-900">Notre Histoire</h2>
-                    <p className="text-gray-700 mb-6">
-                        Fondé en 2005, le Cabinet Cohen s'est imposé comme une référence 
-                        dans le domaine juridique grâce à son expertise et son dévouement 
-                        envers ses clients.
-                    </p>
-                    
-                    <h2 className="text-3xl font-bold mb-6 text-blue-900">Notre Équipe</h2>
-                    <p className="text-gray-700 mb-6">
-                        Ayant eu le Barreau de Paris le 22 janvier 1997. 
-                        Mickael Cohen a eu plus de 400 <Link to="/domaines">decisions</Link> favorables pour ses clients.
+                <div className="max-w-6xl mx-auto space-y-20">
 
-                    </p>
-                    
-                    <h2 className="text-3xl font-bold mb-6 text-blue-900">Nos Valeurs</h2>
-                    <p className="text-gray-700">
-                        Intégrité, excellence et dévouement sont les piliers de notre pratique 
-                        juridique. Nous nous engageons à défendre vos intérêts avec rigueur 
-                        et détermination.
-                    </p>
+                    {/* NOTRE HISTOIRE */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h2 className="text-3xl font-bold mb-6 text-blue-900">Notre Histoire</h2>
+                            <p className="text-gray-700 leading-relaxed">
+                                Maitre Cohen a prêté serment le 4 janvier 1997. 
+                                En tant qu’avocat au barreau de Paris, le cabinet Cohen allie expertise juridique et engagement client 
+                                pour offrir des solutions personnalisées et efficaces dans divers domaines du droit.
+                            </p>
+                        </div>
+                        <img 
+                            src={cabinet1} 
+                            alt="Notre histoire" 
+                            className="rounded-xl shadow-lg object-cover w-full h-80"
+                        />
+                    </div>
+
+                    {/* NOS VALEURS */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <img 
+                            src={cabinet2} 
+                            alt="Nos valeurs" 
+                            className="rounded-xl shadow-lg object-cover w-full h-80 order-1 md:order-2"
+                        />
+                        <div className="order-2 md:order-1">
+                            <h2 className="text-3xl font-bold mb-6 text-blue-900">Nos Valeurs</h2>
+                            <p className="text-gray-700 leading-relaxed">
+                                Disponibilité, excellence et dévouement sont les piliers de notre pratique juridique. 
+                                Nous nous engageons à défendre vos intérêts avec rigueur et détermination, 
+                                dans le respect des règles éthiques et déontologiques de notre profession.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* LE CABINET */}
+                    <div>
+                        <h2 className="text-3xl font-bold mb-6 text-blue-900">Le Cabinet</h2>
+                        <p className="text-gray-700 mb-8 leading-relaxed">
+                            Situé au cœur de Paris, notre cabinet vous accueille dans un espace moderne et chaleureux,
+                            conçu pour favoriser l’écoute et l’échange. Chaque détail a été pensé pour offrir 
+                            un cadre propice à la réflexion et à la confidentialité.
+                        </p>
+
+                        {/* Photos en grille */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <img src={cabinet1} alt="Cabinet photo 1" className="rounded-lg shadow-md object-cover w-full h-64" />
+                            <img src={cabinet2} alt="Cabinet photo 2" className="rounded-lg shadow-md object-cover w-full h-64" />
+                            <img src={cabinet3} alt="Cabinet photo 3" className="rounded-lg shadow-md object-cover w-full h-64" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

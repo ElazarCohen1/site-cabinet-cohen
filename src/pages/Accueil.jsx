@@ -46,7 +46,7 @@ export default function Accueil() {
                 />
                 <div className="container px-6 text-black animate-slide-bottom">
                     <Title  text="Bienvenue au Cabinet Cohen" className="animate-slide-bottom" />
-                    <p className="text-xl max-w-2xl mb-8">Votre expertise juridique au service de vos droits</p>
+                    <p className="text-xl max-w-2xl mb-8">Notre expertise juridique au service de vos droits</p>
                     <button 
                         className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 rounded-full transition-colors duration-300"
                         onClick={() => document.getElementById('domaines').scrollIntoView({ behavior: 'smooth' })}
@@ -97,8 +97,9 @@ export default function Accueil() {
                     <div className="max-w-2xl bg-white/90 p-8 rounded-lg shadow-lg">
                         <h2 className='text-4xl font-bold mb-6 text-blue-900'>Notre Cabinet</h2>
                         <p className='text-gray-700 mb-6'>
-                            Fondé en 2005, le Cabinet Cohen allie expertise juridique et approche personnalisée 
-                            pour défendre au mieux vos intérêts.
+                            Maitre Cohen a preté le 4 janvier 1997. En tant que avocat au barreau de Paris,
+                            Le cabinet Cohen allie expertise juridique et engagement client pour offrir des solutions
+                            personnalisées et efficaces dans divers domaines du droit.
                         </p>
                         <button
                             className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-full transition-colors duration-300"

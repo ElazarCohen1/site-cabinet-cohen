@@ -38,11 +38,7 @@ const domaines = [
       { categorie: "Droit du travail", decisions: 4 },
     ],
   },
-  {
-    categorie: "Constitutionnel",
-    decisions: 0,
-    sousDomaines: [],
-  },
+  
 ];
 
 
@@ -75,6 +71,12 @@ export default function Domaines() {
             à chaque client.
           </p>
 
+          {/* Phrase discrète en plus petit */}
+          <p className="text-xs text-gray-500 text-center mt-6">
+            Les détails des décisions sont accessibles via Doctrine (réservé aux abonnés) 
+            ou peuvent être communiqués par le cabinet sur demande.
+          </p>
+
           {/* Grille de domaines principaux */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {domaines.map((domaine, index) => (
@@ -101,20 +103,11 @@ export default function Domaines() {
                     ))}
                   </ul>
                 )}
-
-                <a
-                  href="https://www.doctrine.fr/p/avocat/L6BDD03DDB33DAAEA93A0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 border rounded-lg text-blue-700 border-blue-700 hover:bg-blue-700 hover:text-white transition w-fit mt-auto"
-                >
-                  Voir les décisions
-                </a>
-
               </div>
             ))}
           </div>
         </div>
+
       </div>
     </div>
   );

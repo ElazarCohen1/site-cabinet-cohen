@@ -26,8 +26,9 @@ function App() {
           <Link to="/mentionslegales" >Mentions legales </Link> |{" "}
           <p>© 2025 Cabinet Cohen. Tous droits réservés.</p>
           <p>Adresse: 26 rue Daubighy, 75017 Paris</p>
-          <p>Téléphone: +33 1 23 45 67 89</p>
           <p>Email: avocat.cohen@gmail.com</p>
+          <p>Téléphone: +33 1 23 45 67 89</p>
+          
         </footer>
       </Router>
       

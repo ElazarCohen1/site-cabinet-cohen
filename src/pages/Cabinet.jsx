@@ -37,7 +37,7 @@ export default function Cabinet() {
                 <div className="max-w-6xl mx-auto space-y-20">
 
                     {/* NOTRE HISTOIRE */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center ">
                         <div>
                             <h2 className="text-3xl font-bold mb-6 text-blue-900">Notre Histoire</h2>
                             <p className="text-gray-700 leading-relaxed">
@@ -49,7 +49,7 @@ export default function Cabinet() {
                         <img 
                             src={cabinet1} 
                             alt="Notre histoire" 
-                            className="rounded-xl shadow-lg object-cover w-full h-80"
+                            className="rounded-xl shadow-lg object-cover w-full h-48 sm:h-80 hidden md:block"
                         />
                     </div>
 
@@ -58,7 +58,7 @@ export default function Cabinet() {
                         <img 
                             src={cabinet2} 
                             alt="Nos valeurs" 
-                            className="rounded-xl shadow-lg object-cover w-full h-80 order-1 md:order-2"
+                            className="rounded-xl shadow-lg object-cover w-full h-80 hidden md:block"
                         />
                         <div className="order-2 md:order-1">
                             <h2 className="text-3xl font-bold mb-6 text-blue-900">Nos Valeurs</h2>
@@ -80,11 +80,24 @@ export default function Cabinet() {
                         </p>
 
                         {/* Photos en grille */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <img src={cabinet1} alt="Cabinet photo 1" className="rounded-lg shadow-md object-cover w-full h-64" />
-                            <img src={cabinet2} alt="Cabinet photo 2" className="rounded-lg shadow-md object-cover w-full h-64" />
-                            <img src={cabinet3} alt="Cabinet photo 3" className="rounded-lg shadow-md object-cover w-full h-64" />
+                        <div className="flex flex-row justify-between gap-2 md:grid md:grid-cols-3 md:gap-6">
+                            <img 
+                                src={cabinet1} 
+                                alt="Cabinet photo 1" 
+                                className="rounded-lg shadow-md object-cover w-1/3 h-24 sm:h-32 md:w-full md:h-64"
+                            />
+                            <img 
+                                src={cabinet2} 
+                                alt="Cabinet photo 2" 
+                                className="rounded-lg shadow-md object-cover w-1/3 h-24 sm:h-32 md:w-full md:h-64"
+                            />
+                            <img 
+                                src={cabinet3} 
+                                alt="Cabinet photo 3" 
+                                className="rounded-lg shadow-md object-cover w-1/3 h-24 sm:h-32 md:w-full md:h-64"
+                            />
                         </div>
+
                     </div>
                 </div>
             </div>

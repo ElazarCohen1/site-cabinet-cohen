@@ -25,7 +25,6 @@ export default function Honoraires(){
                                 >
                                     {tab === 'principes' && 'Nos Principes'}
                                     {tab === 'modes' && 'Modes de Facturation'}
-                                    {tab === 'prestations' && 'Prestations'}
                                 </button>
                             ))}
                         </nav>
@@ -106,46 +105,7 @@ export default function Honoraires(){
                             </div>
                         )}
 
-                        {activeTab === 'prestations' && (
-                            <div className="space-y-6">
-                                <h3 className="text-2xl font-semibold text-blue-900">Exemples de Prestations</h3>
-                                
-                                <div className="overflow-x-auto">
-                                    <table className="min-w-full divide-y divide-gray-200">
-                                        <thead className="bg-gray-100">
-                                            <tr>
-                                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Prestation</th>
-                                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Fourchette indicative</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="bg-white divide-y divide-gray-200">
-                                            <tr>
-                                                <td className="px-4 py-4 text-sm text-gray-700">Consultation juridique (1h)</td>
-                                                <td className="px-4 py-4 text-sm text-gray-900">150€ - 250€ HT</td>
-                                            </tr>
-                                            <tr className="bg-gray-50">
-                                                <td className="px-4 py-4 text-sm text-gray-700">Rédaction de contrat</td>
-                                                <td className="px-4 py-4 text-sm text-gray-900">500€ - 1500€ HT</td>
-                                            </tr>
-                                            <tr>
-                                                <td className="px-4 py-4 text-sm text-gray-700">Contentieux simple</td>
-                                                <td className="px-4 py-4 text-sm text-gray-900">1500€ - 4000€ HT</td>
-                                            </tr>
-                                            <tr className="bg-gray-50">
-                                                <td className="px-4 py-4 text-sm text-gray-700">Contentieux complexe</td>
-                                                <td className="px-4 py-4 text-sm text-gray-900">Sur devis personnalisé</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                
-                                <div className="bg-blue-50 p-4 rounded-lg mt-6">
-                                    <p className="text-sm text-blue-800">
-                                        📞 Contactez-nous pour obtenir un devis personnalisé adapté à votre situation.
-                                    </p>
-                                </div>
-                            </div>
-                        )}
+                        
                     </div>
                 </div>
                 
@@ -164,7 +124,7 @@ export default function Honoraires(){
                             </li>
                             <li className="flex items-start">
                                 <span className="text-green-600 mr-2">✓</span>
-                                <span>Règlement par virement, chèque ou carte bancaire</span>
+                                <span>Règlement par virement, chèque </span>
                             </li>
                         </ul>
                     </div>
@@ -175,9 +135,6 @@ export default function Honoraires(){
                             Selon vos ressources, vous pouvez bénéficier de l'aide juridictionnelle 
                             qui prend en charge tout ou partie de vos frais de justice.
                         </p>
-                        <button className="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-lg text-sm transition-colors duration-300">
-                            En savoir plus
-                        </button>
                     </div>
                 </div>
             </div>
